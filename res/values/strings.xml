@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Linear Optimization Guide</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="standard_form">&lt;p&gt;The general linear programming problem can be stated in the following standard forms:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;i&gt;Scalar Form&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Minimize f (x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, .  .  . , x&lt;sub&gt;n&lt;/sub&gt;) = c&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + c&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; (3.1&lt;i&gt;a&lt;/i&gt;)&lt;/p&gt;
+
+&lt;p&gt;subject to the constraints&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;11&lt;/sub&gt;x1 + a&lt;sub&gt;12&lt;/sub&gt;x2 + .  .  . + a&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;21&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;22&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;.  .  .&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;m&lt;/sub&gt; (3.2&lt;i&gt;a&lt;/i&gt;)&lt;/p&gt;
+
+&lt;p&gt;x&lt;sub&gt;1&lt;/sub&gt; &gt;= 0&lt;/p&gt;
+
+&lt;p&gt;x&lt;sub&gt;2&lt;/sub&gt; &gt;= 0&lt;/p&gt;
+
+&lt;p&gt;.  .  .&lt;/p&gt;
+
+&lt;p&gt;x&lt;sub&gt;n&lt;/sub&gt; &gt;= 0 (3.3&lt;i&gt;a&lt;/i&gt;)&lt;/p&gt;
+
+&lt;p&gt;where c&lt;sub&gt;j&lt;/sub&gt; , b&lt;sub&gt;j&lt;/sub&gt; , and a&lt;sub&gt;ij&lt;/sub&gt; (i = 1, 2, .  .  . ,m; j = 1, 2, .  .  . , n) are known constants, and x&lt;sub&gt;j&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;are the decision variables.&lt;/p&gt;
+
+&lt;p&gt;The characteristics of a linear programming problem, stated in standard form, are&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1. &lt;/b&gt;The objective function is of the minimization type.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;2. &lt;/b&gt;All the constraints are of the equality type.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;3. &lt;/b&gt;All the decision variables are nonnegative.&lt;/p&gt;
+
+&lt;p&gt;It is now shown that any linear programming problem can be expressed in standard&lt;/p&gt;
+
+&lt;p&gt;form by using the following transformations.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1. &lt;/b&gt;The maximization of a function f (x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, .  .  . , x&lt;sub&gt;n&lt;/sub&gt;) is equivalent to the minimization of the negative of the same function. For example, the objective function&lt;/p&gt;
+
+&lt;p&gt;minimize f = c&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + c&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;is equivalent to&lt;/p&gt;
+
+&lt;p&gt;maximize f \' = -f = -c&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; - c&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; - .  .  . - c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;Consequently, the objective function can be stated in the minimization form in any linear programming problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;2. &lt;/b&gt;In most engineering optimization problems, the decision variables represent some physical dimensions, and hence the variables x&lt;sub&gt;j&lt;/sub&gt; will be nonnegative. However, a variable may be unrestricted in sign in some problems. In such cases, an unrestricted variable (which can take a positive, negative, or zero value) can be written as the difference of two nonnegative variables. Thus if x&lt;sub&gt;j&lt;/sub&gt; is unrestricted in sign, it can be written as x&lt;sub&gt;j&lt;/sub&gt; = x\'&lt;sub&gt;j&lt;/sub&gt; - x\"&lt;sub&gt;j&lt;/sub&gt; , where x\'&lt;sub&gt;j&lt;/sub&gt; >= 0 and x\"&lt;sub&gt;j&lt;/sub&gt; >= 0 &lt;/p&gt;
+
+&lt;p&gt;It can be seen that x&lt;sub&gt;j&lt;/sub&gt; will be negative, zero, or positive, depending on whether x\"j is greater than, equal to, or less than x\'&lt;sub&gt;j&lt;/sub&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;3. &lt;/b&gt;If a constraint appears in the form of a \"less than or equal to\" type of inequality as&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;kn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; &lt;= b&lt;sub&gt;k&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;it can be converted into the equality form by adding a nonnegative slack variable x&lt;sub&gt;n&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; as follows:&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;kn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + x&lt;sub&gt;n&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; = b&lt;sub&gt;k&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly, if the constraint is in the form of a \"greater than or equal to\" type of inequality as &lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;kn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; >= b&lt;sub&gt;k&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;it can be converted into the equality form by subtracting a variable as&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;k&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;kn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; - x&lt;sub&gt;n&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; = b&lt;sub&gt;k&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;where x&lt;sub&gt;n&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; is a nonnegative variable known as a &lt;i&gt;surplus variable&lt;/i&gt;.&lt;/p&gt;
+        
+    </string>
+
+    
+<string name="pivoting" >&lt;p&gt;Instead of a square system, let us consider a system of m equations in n variables with n >= m. This system of equations is assumed to be consistent so that it will have at least one solution:&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;11&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;12&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;a21x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;22&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;.  .  .&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;m&lt;/sub&gt; (3.18)&lt;/p&gt;
+
+&lt;p&gt;The solution vector(s) &lt;b&gt;X &lt;/b&gt;that satisfy Eqs. (3.18) are not evident from the equations. However, it is possible to reduce this system to an equivalent canonical system from which at least one solution can readily be deduced. If pivotal operations with respect to any set of m variables, say, x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, .  .  . , x&lt;sub&gt;m&lt;/sub&gt;, are carried, the resulting set of equations can be written as follows:&lt;/p&gt;
+
+&lt;p&gt;Canonical system with pivotal variables x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2, -----&lt;/sub&gt; , x&lt;sub&gt;m&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;1x&lt;sub&gt;1&lt;/sub&gt; + 0x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + 0x&lt;sub&gt;m&lt;/sub&gt; + a\"&lt;sub&gt;1&lt;/sub&gt;,&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1 &lt;/sub&gt;+ .  .  . + a\"&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b\"&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;0x&lt;sub&gt;1&lt;/sub&gt; + 1x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + 0x&lt;sub&gt;m&lt;/sub&gt; + a\"&lt;sub&gt;2&lt;/sub&gt;,&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; + .  .  . + a\"&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b\"&lt;sub&gt;2&lt;/sub&gt; (3.19)&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;0x&lt;sub&gt;1&lt;/sub&gt; + 0x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + 1x&lt;sub&gt;m&lt;/sub&gt; + a\"&lt;sub&gt;m&lt;/sub&gt;,&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; + .  .  . + a\"&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b\"&lt;sub&gt;m&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt; &lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt; &lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;One special solution that can always be deduced from the system of Eqs. (3.19) is&lt;/p&gt;
+
+&lt;p&gt;x&lt;sub&gt;i&lt;/sub&gt; =b\"&lt;sub&gt;i&lt;/sub&gt; , i = 1, 2, .  .  . ,m and&lt;/p&gt;
+
+&lt;p&gt;x&lt;sub&gt;i&lt;/sub&gt; =0, i = m + 1, m + 2, .  .  . , n (3.20)&lt;/p&gt;
+
+&lt;p&gt;This solution is called a &lt;i&gt;basic solution &lt;/i&gt;since the solution vector contains no more than m nonzero terms. The pivotal variables x&lt;sub&gt;i&lt;/sub&gt; , i = 1, 2, .  .  . ,m, are called the &lt;i&gt;basic&lt;/i&gt; &lt;i&gt;variables &lt;/i&gt;and the other variables x&lt;sub&gt;i&lt;/sub&gt; , i = m + 1,m + 2, .  .  . , n, are called the &lt;i&gt;nonbasic&lt;/i&gt; &lt;i&gt;variables&lt;/i&gt;. Of course, this is not the only solution, but it is the one most readily deduced from Eqs. (3.19). If all b\"&lt;sub&gt;i&lt;/sub&gt; , i = 1, 2, .  .  . ,m, in the solution given by Eqs. (3.20) are&lt;/p&gt;
+
+&lt;p&gt;nonnegative, it satisfies Eqs. (3.3) in addition to Eqs. (3.2), and hence it can be called a &lt;i&gt;basic feasible solution&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is possible to obtain the other basic solutions from the canonical system of Eqs. (3.19). We can perform an additional pivotal operation on the system after it is in canonical form, by choosing a\"&lt;sub&gt;pq&lt;/sub&gt; (which is nonzero) as the pivot term, q &amp;gt;m, and using any row p (among 1, 2, .  .  . ,m). The new system will still be in canonical form but with x&lt;sub&gt;q&lt;/sub&gt; as the pivotal variable in place of x&lt;sub&gt;p&lt;/sub&gt;. The variable x&lt;sub&gt;p&lt;/sub&gt;, which was a basic variable in the original canonical form, will no longer be a basic variable in the new canonical form. This new canonical system yields a new basic solution (which may or may not be feasible) similar to that of Eqs. (3.20). It is to be noted that the values of all the basic variables change, in general, as we go from one basic solution to another, but only one zero variable (which is nonbasic in the original canonical form) becomes nonzero (which is basic in the new canonical system), and vice versa.&lt;/p&gt;
+    
+</string>
+
+<string name="primal_simplex">&lt;p&gt;The starting point of the simplex algorithm is always a set of equations, which includes the objective function along with the equality constraints of the problem in canonical form. Thus the objective of the simplex algorithm is to find the vector &lt;b&gt;X &lt;/b&gt;>= 0 that minimizes the function f (&lt;b&gt;X&lt;/b&gt;) and satisfies the equations:&lt;/p&gt;
+
+&lt;p&gt;1x&lt;sub&gt;1&lt;/sub&gt; + 0x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + 0x&lt;sub&gt;m&lt;/sub&gt; + a\"&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;,m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; + .  .  . + a\"&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b\"&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;0x&lt;sub&gt;1&lt;/sub&gt; + 1x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + 0x&lt;sub&gt;m&lt;/sub&gt; + a\"&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;,m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; + .  .  . + a\"&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b\"&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;0x&lt;sub&gt;1&lt;/sub&gt; + 0x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + 1x&lt;sub&gt;m&lt;/sub&gt; + a\"&lt;sub&gt;m,m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; + .  .  . + a\"&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b\"&lt;sub&gt;m&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;0x&lt;sub&gt;1&lt;/sub&gt; + 0x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + 0x&lt;sub&gt;m&lt;/sub&gt; - f+ c\"&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;+&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt; + .  .  . + c\"&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = -f\"&lt;sub&gt;0&lt;/sub&gt; (3.21)&lt;/p&gt;
+
+&lt;p&gt;where a\"&lt;i&gt;&lt;sub&gt;ij&lt;/sub&gt; &lt;/i&gt;, c\"&lt;sub&gt;j&lt;/sub&gt; , b\"&lt;sub&gt;i&lt;/sub&gt; , and f \"&lt;sub&gt;0&lt;/sub&gt; are constants. Notice that (-f ) is treated as a basic variable in the canonical form of Eqs. (3.21). The basic solution that can readily be deduced from Eqs. (3.21) is&lt;/p&gt;
+
+&lt;p&gt;x&lt;sub&gt;i&lt;/sub&gt; = b\"&lt;sub&gt;i&lt;/sub&gt; , i = 1, 2, . . . ,m&lt;/p&gt;
+
+&lt;p&gt;f = f &lt;sup&gt;n&lt;/sup&gt;&lt;sub&gt;0&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;x&lt;sub&gt;i&lt;/sub&gt; = 0, i = m + 1,m + 2, . . . , n (3.22)&lt;/p&gt;
+
+&lt;p&gt;If the basic solution is also feasible, the values of x&lt;sub&gt;i&lt;/sub&gt; , i = 1, 2, . . . , n, are nonnegative and hence&lt;/p&gt;
+
+&lt;p&gt;b\"&lt;sub&gt;i&lt;/sub&gt; >= 0, i = 1, 2, . . . ,m &lt;/p&gt;
+
+&lt;p&gt;Since the simplex algorithm is intended to move from one basic feasible solution to the other through pivotal operations, before moving to the next basic feasible solution, we have to make sure that the present basic feasible solution is not the optimal solution. A basic feasible solution is an optimal solution with a minimum objective function value of f\"&lt;sub&gt;0&lt;/sub&gt; if all the cost coefficients c\"&lt;sub&gt;j&lt;/sub&gt; , j = m + 1,m + 2, . . . , n, in Eqs. (3.21) are nonnegative.&lt;/p&gt;
+
+&lt;p&gt;So the Simplex algorithm is-&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1. &lt;/b&gt;Start with a basic feasible solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;2. &lt;/b&gt;Find s such that c&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;s &lt;/sub&gt;= min(c&lt;sub&gt;i&lt;/sub&gt;) , i = 1, 2, . . . ,m&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;3. &lt;/b&gt;If c&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;s&lt;/sub&gt; &amp;lt;0 is false then the solution is optimal. Stop. &lt;/p&gt;
+
+&lt;p&gt;If it is true then check if all a&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;is&lt;/sub&gt; &amp;lt;=0.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;i. &lt;/b&gt;If true then the solution is unbounded. Stop.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;ii. &lt;/b&gt;If false then find the ratio (b&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;i&lt;/sub&gt;&lt;b&gt;/&lt;/b&gt; a&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;is&lt;/sub&gt;&lt;b&gt; ) &lt;/b&gt;for a&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;is &lt;/sub&gt;&amp;gt;0.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;4. &lt;/b&gt;Find r such that b&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;r&lt;/sub&gt;&lt;b&gt;/&lt;/b&gt; a&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;rs&lt;/sub&gt;=min &lt;sub&gt;a\"is &amp;gt;0 &lt;/sub&gt;(b&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;i&lt;/sub&gt;&lt;b&gt;/&lt;/b&gt; a&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;is&lt;/sub&gt;&lt;b&gt; )&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;5. &lt;/b&gt;Obtain new canonical form including the objective function by pivoting on a&lt;sup&gt;\"&lt;/sup&gt;&lt;sub&gt;rs.&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt; &lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;6. &lt;/b&gt;Goto step 1.&lt;/p&gt;
+    
+</string>
+<string name="two_phase_simplex">&lt;p&gt;The problem is to find nonnegative values for the variables x&lt;sub&gt;1&lt;/sub&gt;, x&lt;sub&gt;2&lt;/sub&gt;, . . . , x&lt;sub&gt;n&lt;/sub&gt; that satisfy the equations&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;11&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;12&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;21&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;22&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = b&lt;sub&gt;m&lt;/sub&gt; (3.32)&lt;/p&gt;
+
+&lt;p&gt;and minimize the objective function given by&lt;/p&gt;
+
+&lt;p&gt;c&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + c&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; = f (3.33)&lt;/p&gt;
+
+&lt;p&gt;Phase I of the simplex method uses the simplex algorithm itself to find whether the linear programming problem has a feasible solution. If a feasible solution exists, it provides a basic feasible solution in canonical form ready to initiate phase II of the method. Phase II, in turn, uses the simplex algorithm to find whether the problem has
+
+ a bounded optimum. If a bounded optimum exists, it finds the basic feasible solution that is optimal. The simplex method is described in the following steps.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1. &lt;/b&gt;Arrange the original system of Eqs. (3.32) so that all constant terms bi are positive or zero by changing, where necessary, the signs on both sides of any of the equations.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;2. &lt;/b&gt;Introduce to this system a set of artificial variables y&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;, . . . , y&lt;sub&gt;m&lt;/sub&gt; (which serve as basic variables in phase I), where each y&lt;sub&gt;i&lt;/sub&gt;&amp;gt;= 0, so that it becomes&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;11&lt;/sub&gt;x1 + a&lt;sub&gt;12&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;1&lt;/sub&gt; = b&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;21&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;22&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;2&lt;/sub&gt; = b&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;m&lt;/sub&gt; = b&lt;sub&gt;m&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;b&lt;sub&gt;i&lt;/sub&gt;&amp;gt;= 0 (3.34)&lt;/p&gt;
+
+&lt;p&gt;Note that in Eqs. (3.34), for a particular i, the a&lt;sub&gt;ij&lt;/sub&gt; \'s and the b&lt;sub&gt;i&lt;/sub&gt; may be the negative of what they were in Eq.(3.32) because of step 1.&lt;/p&gt;
+
+&lt;p&gt;The objective function of Eq. (3.33) can be written as&lt;/p&gt;
+
+&lt;p&gt;c&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + c&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + (-f ) = 0 (3.35)&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;3. &lt;/b&gt;&lt;i&gt;Phase I of the method&lt;/i&gt;. Define a quantity w as the sum of the artificial variables&lt;/p&gt;
+
+&lt;p&gt;w = y&lt;sub&gt;1&lt;/sub&gt; + y&lt;sub&gt;2&lt;/sub&gt; + .  .  . + y&lt;sub&gt;m&lt;/sub&gt; (3.36)&lt;/p&gt;
+
+&lt;p&gt;and use the simplex algorithm to find x&lt;sub&gt;i&lt;/sub&gt; &amp;gt;= 0 (i = 1, 2, . . . , n) and y&lt;sub&gt;i&lt;/sub&gt; &amp;gt;= 0 (i = 1, 2, . . . ,m) which minimize w and satisfy Eqs. (3.34) and (3.35). Consequently, consider the array&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;11&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;12&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;1&lt;/sub&gt; = b&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;21&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;22&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;2&lt;/sub&gt; = b&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;m&lt;/sub&gt; = b&lt;sub&gt;m&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;c&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + c&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + (-f ) = 0&lt;/p&gt;
+
+&lt;p&gt;y&lt;sub&gt;1&lt;/sub&gt; + y&lt;sub&gt;2&lt;/sub&gt; + .  .  . + y&lt;sub&gt;m &lt;/sub&gt;+ (-w) = 0 (3.37)&lt;/p&gt;
+
+&lt;p&gt;This array is not in canonical form; however, it can be rewritten as a canonical system with basic variables y&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;, . . . , y&lt;sub&gt;m&lt;/sub&gt;, -f , and -w by subtracting the sum of the first m equations from the last to obtain the new system&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;11&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;12&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;1&lt;/sub&gt; = b&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;21&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;22&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + a&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;2&lt;/sub&gt; = b&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;... ...&lt;/p&gt;
+
+&lt;p&gt;a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + a&lt;sub&gt;m&lt;/sub&gt;&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2 &lt;/sub&gt;+ .  .  . + a&lt;sub&gt;mn&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + y&lt;sub&gt;m&lt;/sub&gt; = b&lt;sub&gt;m&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;c&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + c&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + (-f ) = 0&lt;/p&gt;
+
+&lt;p&gt;d&lt;sub&gt;1&lt;/sub&gt;x&lt;sub&gt;1&lt;/sub&gt; + d&lt;sub&gt;2&lt;/sub&gt;x&lt;sub&gt;2&lt;/sub&gt; + .  .  . + d&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; + (-w) = -w&lt;sub&gt;0&lt;/sub&gt; (3.38)&lt;/p&gt;
+
+&lt;p&gt;where d&lt;sub&gt;i&lt;/sub&gt; = -(a&lt;sub&gt;1&lt;/sub&gt;&lt;sub&gt;i&lt;/sub&gt; + a&lt;sub&gt;2&lt;/sub&gt;&lt;sub&gt;i&lt;/sub&gt; + .  .  . + a&lt;sub&gt;mi&lt;/sub&gt; ), i = 1, 2, . . . , n (3.39)&lt;/p&gt;
+
+&lt;p&gt;-w&lt;sub&gt;0&lt;/sub&gt; = -(b&lt;sub&gt;1&lt;/sub&gt; + b&lt;sub&gt;2&lt;/sub&gt; + .  .  . + b&lt;sub&gt;m&lt;/sub&gt;) (3.40)&lt;/p&gt;
+
+&lt;p&gt;Equations (3.38) provide the initial basic feasible solution that is necessary for starting phase I.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;4. &lt;/b&gt;In Eq. (3.37), the expression of w, in terms of the artificial variables y&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;, . . . , y&lt;sub&gt;m&lt;/sub&gt; is known as the &lt;i&gt;infeasibility form. w &lt;/i&gt;has the property that if as a result of phase I, with a minimum of w &amp;gt;0, no feasible solution exists for the original linear programming problem stated in Eqs. (3.32) and (3.33), and thus the procedure is terminated. On the other hand, if the minimum of w = 0, the resulting array will be in canonical form and hence initiate phase II by eliminating the w equation as well as the columns corresponding to each of the artificial variables y&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;, . . . , y&lt;sub&gt;m&lt;/sub&gt; from the array.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;5. &lt;/b&gt;&lt;i&gt;Phase II of the method&lt;/i&gt;. Apply the simplex algorithm to the adjusted canonical system at the end of phase I to obtain a solution, if a finite one exists, which optimizes the value of f.&lt;/p&gt;
+    
+</string>
+<string name="dual_simplex">&lt;p&gt;The dual simplex method requires the availability of a dual feasible solution that is not primal feasible to start with. It is the same as the simplex method applied to the dual problem but is developed such that it can make use of the same tableau as the primal method. Computationally, the dual simplex algorithm also involves a sequence of pivot operations, but with different rules (compared to the regular simplex method) for choosing the pivot element. &lt;/p&gt;
+
+&lt;p&gt;Let the problem to be solved be initially in canonical form with some of the b&lt;sub&gt;i&lt;/sub&gt; &amp;lt; 0, the relative cost coefficients corresponding to the basic variables c&lt;sub&gt;j&lt;/sub&gt; = 0, and all other c&lt;sub&gt;j&lt;/sub&gt;&amp;gt;= 0. Since some of the b&lt;sub&gt;i &lt;/sub&gt;are negative, the primal solution will be infeasible, and since all c&lt;sub&gt;j&lt;/sub&gt;&amp;gt;= 0, the corresponding dual solution will be feasible. Then the simplex method works according to the following iterative steps.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1. &lt;/b&gt;Select row r as the pivot row such that b&lt;sub&gt;r&lt;/sub&gt;= min b&lt;sub&gt;i&lt;/sub&gt; &amp;lt; 0 (4.22)&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;2. &lt;/b&gt;Select column s as the pivot column such that&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;c&lt;sub&gt;j&lt;/sub&gt;/-a&lt;sub&gt;rs&lt;/sub&gt;&lt;/b&gt;&lt;sub&gt; &lt;/sub&gt;= min a&lt;sub&gt;rj&lt;/sub&gt;&amp;lt;0 &lt;b&gt;(c&lt;sub&gt;j&lt;/sub&gt;/-a&lt;sub&gt;rj&lt;/sub&gt;)&lt;/b&gt;&lt;sub&gt; &lt;/sub&gt;( 4.23)&lt;/p&gt;
+
+&lt;p&gt;If all a&lt;sub&gt;rj&lt;/sub&gt; &amp;gt;= 0, the primal will not have any feasible (optimal) solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;3. &lt;/b&gt;Carry out a pivot operation on a&lt;sub&gt;rs&lt;/sub&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;4. &lt;/b&gt;Test for optimality: If all b&lt;sub&gt;i&lt;/sub&gt; &amp;gt;= 0, the current solution is optimal and hence stop the iterative procedure. Otherwise, go to step 1&lt;/p&gt;
+    
+</string>
+<string name="example_text">Here is a solved example for 2 variables and 2 constraints  :-</string>
+</resources>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="dual_simplex">&lt;p&gt; La m&#233;thode de double simplex nécessite la disponibilité d\'une solution réalisable du dual qui n\'est pas primal possible de commencer. C\'est la même que la méthode du simplex appliquée au double probléme mais il est développé de telle sorte qu\'il peut faire usage du même tableau que la méthode primal. Calcul, l\'algorithme du simplexe dual comprend également une séquence d\'opérations de pivotement, mais avec des régles différentes (par rapport à la méthode habituelle en simplex) pour le choix de l\'élément de pivotement. &lt;/p&gt;
+
+&lt;p&gt; Soit le problème à résoudre sera initialement sous forme canonique avec certains des b &lt;sub&gt; i &lt;/sub&gt; &lt;0, les coefficients de coûts relatifs correspondant aux variables de base c &lt;sub&gt; j &lt;/sub&gt; = 0, et tous les autres c &lt;sub&gt; j &lt;/sub &gt;&gt; = 0. étant donné que certains des b &lt;sub&gt; i &lt;/sub&gt; sont négatifs, la solution primale seront irréalisables, et depuis tout c &lt;sub&gt; j &lt;/sub &gt;&gt; = 0, la solution dual correspondant sera réalisable. Ensuite, la méthode du simplexe fonctionne selon le schéma suivant étapes itératives. &lt;/p&gt;
+
+&lt;p&gt; 1. &lt;/b&gt; Select r de ligne que la ligne pivot tel que b &lt;sub&gt; r &lt;/sub&gt; = min b &lt;sub&gt; i &lt;/sub&gt; &lt;0 (4.22) &lt;/p&gt;
+
+&lt;p&gt; 2. &lt;/b&gt; Select colonne s que la colonne pivot tel que &lt;/p&gt;
+
+&lt;p&gt; c &lt;sub&gt; j &lt;/sub&gt; /-a &lt;sub&gt; rs &lt;/sub&gt; &lt;/b&gt; &lt;sub&gt; &lt;/sub&gt; = min a &lt;sub&gt; rj &lt;/sub&gt; &lt;0 &lt;sub&gt; &lt;/sub&gt; &lt;b&gt; (c &lt;sub&gt; j &lt;/sub&gt; /-a &lt;sub&gt; rj &lt;/sub&gt;) &lt;/b&gt; &lt;sub&gt; &lt;/sub&gt; (4.23) &lt;/p &gt;
+
+&lt;p&gt; Si tout a &lt;sub&gt; rj &lt;/sub &gt;&gt; = 0, le primal aura pas de solution réalisable (optimale). &lt;/p&gt;
+
+&lt;p&gt; 3. &lt;/b&gt; Effectuer une opération de pivot sur un &lt;sub&gt; rs &lt;/sub&gt;. &lt;/p&gt;
+
+&lt;p&gt; 4. &lt;/b&gt; Test d\'optimalité: Si tout b &lt;sub&gt; i &lt;/sub&gt;&gt; = 0, la solution actuelle est optimale et donc arrêter la procédure itérative. Sinon, passez à l\'étape 1. &lt;/p&gt;</string>
+    <string name="standard_form">  &lt;p&gt; Le problème général de la programmation linéaire peut être indiqué dans les formulaires standard suivants: &lt;/p&gt;
+
+&lt;p&gt; formulaire scalaire &lt;i&gt; &lt;/i&gt; &lt;/b&gt; &lt;/p&gt;
+
+&lt;p&gt; Réduire f (x &lt;sub&gt; 1 &lt;/sub&gt;, x &lt;sub&gt; 2 &lt;/sub&gt;, ..., x &lt;sub&gt; n &lt;/sub&gt;) = c &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + c &lt;sub&gt; 2 &lt;/sub&gt; x&lt;sub&gt;2&lt;/sub&gt; + • • • + c&lt;sub&gt;n&lt;/sub&gt; x&lt;sub&gt;n&lt;/sub &gt; (3,1 &lt;i&gt; &lt;/i&gt;) &lt;/p&gt;
+
+&lt;p&gt; soumis aux contraintes &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 11 &lt;/sub&gt; x&lt;sub&gt;1&lt;/sub&gt; + a &lt;sub&gt; 12 &lt;/sub&gt; x&lt;sub&gt;2&lt;/sub&gt; + • • • + a &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b&lt;sub&gt;1&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 21 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 22 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + • • • + a &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt;a &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + • • • + a &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b &lt;sub&gt; m &lt;/sub&gt; (3,2 &lt;i&gt; &lt;/i&gt;) &lt;/p&gt;
+
+&lt;p&gt; x &lt;sub&gt; 1 &lt;/sub&gt; ≥ 0 &lt;/p&gt;
+
+&lt;p&gt; x &lt;sub&gt; 2 &lt;/sub&gt; ≥ 0 &lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt; x &lt;sub&gt; n &lt;/sub&gt; ≥ 0 (3,3 &lt;i&gt; &lt;/i&gt;) &lt;/p&gt;
+
+&lt;p&gt; où c &lt;sub&gt; j &lt;/sub&gt;, b &lt;sub&gt; j &lt;/sub&gt; et un &lt;sub&gt; ij &lt;/sub&gt; (i = 1, 2, ..., m, j = 1 constantes, 2, ..., n) sont connus, et x &lt;sub&gt; j &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; sont les variables de décision. &lt;/p&gt;
+
+&lt;p&gt; Les caractéristiques d\&#039;un problème de programmation linéaire, indiquées sous forme standard, sont &lt;/p&gt;
+
+&lt;p&gt; 1. &lt;/b&gt; La fonction objectif est du type de minimisation. &lt;/p&gt;
+
+&lt;p&gt; 2. &lt;/b&gt; Toutes les contraintes sont du type d\&#039;égalité. &lt;/p&gt;
+
+&lt;p&gt; 3. &lt;/b&gt; Toutes les variables de décision sont non négatif. &lt;/p&gt;
+
+&lt;p&gt; Il apparaît maintenant que tout problème de programmation linéaire peut être exprimée dans la norme &lt;/p&gt;
+
+formulaire de &lt;p&gt; en utilisant les transformations suivantes. &lt;/p&gt;
+
+&lt;p&gt; 1. &lt;/b&gt; La maximisation d\&#039;une fonction f (x &lt;sub&gt; 1 &lt;/sub&gt;, x &lt;sub&gt; 2 &lt;/sub&gt;, ..., x &lt;sub&gt; n &lt;/sub&gt;) est équivalente à la minimisation de la forme négative de la même fonction. Par exemple, la fonction objectif &lt;/p&gt;
+
+&lt;p&gt; minimiser f = c &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + c &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + • • • + c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; est équivalent à &lt;/p&gt;
+
+&lt;p&gt; maximiser f \&#039;=-f =-c &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; - c &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; - • • • -c&lt;sub&gt;n&lt;/sub&gt;x&lt;sub&gt;n&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; Par conséquent, la fonction objectif peut être indiqué dans le formulaire de minimisation à un problème de programmation linéaire. &lt;/p&gt;
+
+&lt;p&gt; 2. &lt;/b&gt; Dans la plupart des problèmes d\&#039;optimisation de l\&#039;ingénierie, des variables de décision représentent certaines dimensions physiques, et donc les variables x &lt;sub&gt; j &lt;/sub&gt; sera négatif. Cependant, une variable peut être illimité dans signe dans certains problèmes. Dans de tels cas, une variable libre (ce qui peut prendre une valeur positive, négative ou nulle) peut s\&#039;écrire comme la différence de deux variables non négatives. Ainsi, si x&lt;sub&gt;j&lt;/sub&gt; est libre de signe, il ne peut être écrit que x&lt;sub&gt;j&lt;/sub&gt; = x \&#039;&lt;sub&gt; j &lt;/sub&gt; - x\&#039;\&#039; &lt;sub&gt; j &lt;/sub&gt;, où x\&#039; &lt;sub&gt; j &lt;/sub&gt; ≥ 0 et x\&#039;\&#039; &lt;sub&gt; j &lt;/sub&gt; ≥ 0 &lt;/p&gt;
+
+&lt;p&gt; On voit que x &lt;sub&gt; j &lt;/sub&gt; sera négative, nulle ou positive selon que x\&#039;\&#039; j est supérieur à, inférieur à x \&#039;&lt;sub&gt; j &lt;ou égale à /sub&gt;. &lt;/p&gt;
+
+&lt;p&gt; 3. &lt;/b&gt; Si une contrainte apparaît dans la forme d\&#039;un \&quot;inférieur ou égal à\&quot; type d\&#039;inégalité en tant que &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + • • • + a &lt;sub&gt; kn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; ≤ b &lt;sub&gt; k &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; elle peut être convertie en forme d\&#039;égalité en ajoutant une variable de jeu non négatif x &lt;sub&gt; n &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; comme suit: &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + • • • + a &lt;sub&gt; kn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + x &lt;sub&gt; n &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; = b &lt;sub&gt; k &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;sub&gt; &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; De même, si la contrainte est sous la forme d\&#039;un \&quot;supérieur ou égal à\&quot; type d\&#039;inégalité &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + • • • + a &lt;sub&gt; kn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; ≥ b &lt;sub&gt; k &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; il peut être converti en la forme de l\&#039;égalité en soustrayant une variable comme &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; k &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + • • • + a &lt;sub&gt; kn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; - x &lt;sub&gt; n &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; = b &lt;sub&gt; k &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; où x &lt;sub&gt; n &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; est une variable non négative connue sous le nom d\&#039;une variable de surplus &lt;i&gt; &lt;/i&gt;. &lt;/p&gt;</string>
+    <string name="pivoting">&lt;p&gt; Au lieu d\&#039;un système carré, considérons un système de m équations à n variables avec n ≥ m. Ce système d\&#039;équations est supposé être cohérente afin que cela aura au moins une solution: &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 11 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 12 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + ... + a &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b &lt;sub&gt; 1 &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt;21&lt;/sub&gt;x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 22 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + ... + a &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub &gt; x &lt;sub&gt; n &lt;/sub&gt; = b &lt;sub&gt; 2 &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; X &lt;sub&gt; 2 &lt;/sub&gt; + ... + a &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b &lt;sub&gt; m &lt;/sub&gt; (3.18) &lt;/p&gt;
+
+&lt;p&gt; Le vecteur solution (s) &lt;b&gt; X &lt;/b&gt; qui satisfont les équations. (3.18) ne sont pas évidentes à partir des équations. Cependant, il est possible de réduire ce système à un système canonique équivalent dont au moins une solution peut facilement être déduite. Si les opérations de pivotement par rapport à un ensemble de m variables, disons, x&lt;sub&gt; &lt;1&lt;/sub&gt; &lt;, x&lt;sub&gt; &lt;2&lt;/sub&gt; &lt;,. . . , X&lt;sub&gt; &lt;m&lt;/sub&gt; &lt;, sont effectuées, l\&#039;ensemble des équations qui en résulte peut être écrite comme suit: &lt;/p&gt;
+
+système Canonical &lt;p&gt; avec des variables pivots x &lt;sub&gt; 1 &lt;/sub&gt;, x &lt;sub&gt; 2 ----- &lt;/sub&gt;, x &lt;sub&gt; m &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; 1x &lt;sub&gt; 1 &lt;/sub&gt; + 0x &lt;sub&gt; 2 &lt;/sub&gt; + ... · + 0x &lt;sub&gt; m &lt;/sub&gt; + a\&quot; &lt;sub&gt; 1 &lt;/sub&gt;, &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; + ... + a\&quot; &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b\&quot; &lt;sub&gt; 1 &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; 0x &lt;sub&gt; 1 &lt;/sub&gt; + 1x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + 0x &lt;sub&gt; m &lt;/sub&gt; + a\&quot; &lt;sub&gt; 2 &lt;/sub&gt;, &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; + ... + a\&quot; &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b\&quot; &lt;sub&gt; 2 &lt;/sub&gt; (3.19) &lt;/p&gt;
+
+&lt;p&gt;. &lt;/p&gt;
+
+&lt;p&gt;. &lt;/p&gt;
+
+&lt;p&gt;. &lt;/p&gt;
+
+&lt;p&gt; 0x &lt;sub&gt; 1 &lt;/sub&gt; + 0x &lt;sub&gt; 2 &lt;/sub&gt; + ... + 1x &lt;sub&gt; m &lt;/sub&gt; + a\&quot; &lt;sub&gt; m &lt;/sub&gt;, &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; + ... +  a\&quot; &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b\&quot; &lt;sub&gt; m &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;sub&gt; &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;sub&gt; &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; Une solution spéciale qui peut toujours être déduite du système d\&#039;équations. (3.19) est &lt;/p&gt;
+
+&lt;p&gt; x &lt;sub&gt; i &lt;/sub&gt; = b\&quot; &lt;sub&gt; i &lt;/sub&gt;, i = 1, 2,. . . , M et &lt;/p&gt;
+
+&lt;p&gt; x &lt;sub&gt; i &lt;/sub&gt; = 0, i = m + 1, m + 2,. . . , N (3.20) &lt;/p&gt;
+
+&lt;p&gt; Cette solution est appelée une solution basique &lt;i&gt; &lt;/i&gt; depuis le vecteur de solution contient pas plus de m termes non nuls. Les variables pivots x &lt;sub&gt; i &lt;/sub&gt;, i = 1, 2,. . . , M, sont appelés les &lt;i&gt; de base &lt;/i&gt; &lt;i&gt; des variables &lt;/i&gt; et les autres variables x &lt;sub&gt; i &lt;/sub&gt;, i = m + 1, m + 2,. . . , N, sont appelés les &lt;i&gt; non basiques &lt;/i&gt; &lt;i&gt; des variables &lt;/i&gt;. Bien sûr, ce n\&#039;est pas la seule solution, mais elle est la plus facilement déduite des équations. (3.19). Si tout b\&quot; &lt;sub&gt; i &lt;/sub&gt;, i = 1, 2,. . . , M, dans la solution donnée par les équations. (3,20) sont &lt;/p&gt;
+
+&lt;p&gt; positive ou nulle, elle satisfait les équations. (3.3), en plus de équations. (3.2), et donc il peut être appelé une solution réalisable de base &lt;i&gt; &lt;/i&gt;. &lt;/p&gt;
+
+&lt;p&gt; Il est possible d\&#039;obtenir les autres solutions de base du système canonique des équations. (3.19). Nous pouvons effectuer une opération pivot supplémentaire sur le système après sa mise en forme canonique, en choisissant un\&quot; &lt;sub&gt; pq &lt;/sub&gt; (qui est différent de zéro) que le terme pivot, q&gt; m, et en utilisant n\&#039;importe quelle ligne p (parmi 1, 2, ..., m). Le nouveau système sera encore en forme canonique, mais avec x &lt;sub&gt; q &lt;/sub&gt; comme variable pivot à la place de x &lt;sub&gt; p &lt;/sub&gt;. La variable x &lt;sub&gt; p &lt;/sub&gt;, qui était une variable fondamentale dans la forme canonique d\&#039;origine, ne sera plus une variable fondamentale dans la nouvelle forme canonique. Ce nouveau système canonique donne une nouvelle solution de base (qui peut ou peut ne pas être possible) semblable à celle des équations. (3.20). Il est à noter que les valeurs de tous les changements de base de variables, en général, on passe d\&#039;un solution de base à l\&#039;autre, mais une seule variable zéro (ce qui est non basique dans la forme canonique d\&#039;origine) devient différente de zéro (ce qui est fondamental dans le nouveau système canonique), et vice versa. &lt;/p&gt;        </string>
+    <string name="primal_simplex">&lt;p&gt; Le point de l\&#039;algorithme du simplexe de départ est toujours un jeu d\&#039;équations, qui comprend la fonction d\&#039;objectif, ainsi que les contraintes d\&#039;égalité du problème sous forme canonique. Ainsi, l\&#039;objectif de l\&#039;algorithme du simplex est de trouver le vecteur &lt;b&gt; X &lt;/b&gt; ≥ 0 qui minimise la fonction f (&lt;b&gt; X &lt;/b&gt;) et satisfait les équations: &lt;/p&gt;
+
+&lt;p&gt; 1x &lt;sub&gt; 1 &lt;/sub&gt; + 0x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + 0x &lt;sub&gt; m &lt;/sub&gt; + a\&quot; &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt;, m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; + · · · + a\&quot; &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b\&quot; &lt;sub&gt; 1 &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; 0x &lt;sub&gt; 1 &lt;/sub&gt; + 1x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + 0x &lt;sub&gt; m &lt;/sub&gt; + a\&quot; &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt;, m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; + · · · + a\&quot; &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b\&quot; &lt;sub&gt; 2 &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt; 0x &lt;sub&gt; 1 &lt;/sub&gt; + 0x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + 1x &lt;sub&gt; m &lt;/sub&gt; + a\&quot; &lt;sub&gt; m, m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; + · · · + a\&quot; &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b\&quot; &lt;sub&gt; m &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; 0x &lt;sub&gt; 1 &lt;/sub&gt; + 0x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + 0x &lt;sub&gt; m &lt;/sub&gt; - f + c\&quot; &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt;+&lt;/sub&gt; &lt;sub&gt;1&lt;/sub&gt; x &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; + &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; + · · · + c\&quot;&lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; =-f\&quot; &lt;sub&gt; 0 &lt;/sub&gt; (3.21) &lt;/p&gt;
+
+&lt;p&gt; où a\&quot; &lt;i&gt; &lt;sub&gt; ij &lt;/sub&gt; &lt;/i&gt;, c\&quot; &lt;sub&gt; j &lt;/sub&gt;, b\&quot; &lt;sub&gt; i &lt;/sub&gt; et f \&quot; &lt;sub&gt; 0 &lt;/sub&gt; sont des constantes. Notez que (-f) est traitée comme une variable fondamentale dans la forme canonique des équations. (3.21). La solution de base qui peut facilement être déduite des équations. (3.21) est &lt;/p&gt;
+
+&lt;p&gt; x &lt;sub&gt; i &lt;/sub&gt; = b\&quot; &lt;sub&gt; i &lt;/sub&gt;, i = 1, 2,. . . , M &lt;/p&gt;
+
+&lt;p&gt; f = f &lt;sup&gt; n &lt;/sup&gt; &lt;sub&gt; 0 &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; x &lt;sub&gt; i &lt;/sub&gt; = 0, i = m + 1, m + 2,. . . , N (3.22) &lt;/p&gt;
+
+&lt;p&gt; Si la solution de base est également possible, les valeurs de x &lt;sub&gt; i &lt;/sub&gt;, i = 1, 2,. . . , N, sont non négatif et donc &lt;/p&gt;
+
+&lt;p&gt; b\&quot; &lt;sub&gt; i &lt;/sub&gt; ≥ 0, i = 1, 2,. . . , M &lt;/p&gt;
+
+&lt;p&gt; Depuis l\&#039;algorithme simplex vise à passer d\&#039;une solution de base à l\&#039;autre à travers des opérations pivots, avant de passer à la solution de base réalisable prochaine, nous devons nous assurer que la solution de base actuelle n\&#039;est pas la solution optimale. Une solution de base est une solution optimale à une valeur de la fonction objectif minimum de f\&quot; &lt;sub&gt; 0 &lt;/sub&gt; si tous les coefficients de coûts c\&quot; &lt;sub&gt; j &lt;/sub&gt;, j = m + 1, m + 2,. . . , N, dans les équations. (3.21) sont positifs ou nuls. &lt;/p&gt;
+
+&lt;p&gt; Donc l\&#039;algorithme Simplex est-&lt;/p&gt;
+
+&lt;p&gt; 1. &lt;/b&gt; Commencez avec une solution de base. &lt;/p&gt;
+
+&lt;p&gt; 2. &lt;/b&gt; Trouvez cCette que c &lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt; s &lt;/sub&gt; = min (c &lt;sub&gt; i &lt;/sub&gt;), i = 1, 2,. . . , M &lt;/p&gt;
+
+&lt;p&gt; 3. &lt;/b&gt; Si c &lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt; s &lt;/sub&gt; &lt;0 est faux, alors la solution est optimale. Stop. &lt;/p&gt;
+
+&lt;p&gt; Si cela est vrai, alors vérifier si tout a&lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt;is&lt;/sub&gt; &lt;= 0. &lt;/p&gt;
+
+&lt;p&gt; i. &lt;/b&gt; Si cela est vrai, alors la solution est sans bornes. Stop. &lt;/p&gt;
+
+&lt;p&gt; ii. &lt;/b&gt; Si elle est fausse alors trouver le rapport (b &lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt;i&lt;/sub&gt; &lt;b&gt; /&lt;/b&gt; a &lt;sup&gt;\&quot; &lt;/sup&gt; &lt;sub&gt;is&lt;/sub&gt; ) pour a&lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt;is&lt;/sub &gt;&gt; 0. &lt;/p&gt;
+
+&lt;p&gt; 4. &lt;/b&gt; Trouvez r tels que b &lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt; r &lt;/sub&gt; &lt;b&gt; /&lt;/b&gt; a&lt;sup&gt;\&quot; &lt;/sup&gt; &lt;sub&gt; rs &lt;/sub&gt; = min a\&quot; &lt;sub&gt;is&gt; 0 &lt;/sub&gt; (b &lt;sup&gt;\&quot; &lt;/sup&gt; &lt;sub&gt; i &lt;/sub&gt; &lt;b&gt; /&lt;/b&gt; a &lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt;is&lt;/sub&gt; &lt;b&gt;) &lt;/b&gt;. &lt;/p&gt;
+
+&lt;p&gt; 5. &lt;/b&gt; Obtenir nouvelle forme canonique dont la fonction objectif en pivotant sur a&lt;sup&gt; \&quot;&lt;/sup&gt; &lt;sub&gt; rs. &lt;/Sub&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;sub&gt; &lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; 6. &lt;/b&gt; Aller à l\&#039;étape 1. &lt;/p&gt;</string>
+    <string name="example_text">Voici un exemple résolu pour 2 variables et 2 contraintes: -</string>
+    <string name="two_phase_simplex">&lt;p&gt; Le problème est de trouver des valeurs non négatives pour les variables x &lt;sub&gt; 1 &lt;/sub&gt;, x &lt;sub&gt; 2 &lt;/sub&gt;. . . , X &lt;sub&gt; n &lt;/sub&gt; qui satisfont aux équations &lt;/p&gt;
+
+&lt;p&gt; a &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 12 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 1 n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b &lt;sub&gt;1&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 21 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 22 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b &lt;sub&gt;2&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; X &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = b &lt;sub&gt;m&lt;/sub&gt; (3.32) &lt;/p&gt;
+
+&lt;p&gt; et minimiser la fonction objectif donnée par &lt;/p&gt;
+
+&lt;p&gt; c &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + c &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + c &lt;sub&gt; n&lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; = f (3.33) &lt;/p&gt;
+
+&lt;p&gt; la phase I de la méthode du simplexe utilise l\&#039;algorithme du simplexe lui-même de trouver si le problème de programmation linéaire a une solution réalisable. Si une solution réalisable existe, elle fournit une solution réalisable de base sous forme canonique prêt à lancer la phase II de la méthode. Phase II, à son tour, utilise l\&#039;algorithme du simplex pour savoir si le problème a &lt;/p&gt;
+
+&lt;p&gt; un optimum borné. Si un optimum borné existe, il trouve la solution de base qui est optimal. La méthode du simplex est décrit dans les étapes suivantes. &lt;/p&gt;
+
+&lt;p&gt; 1. &lt;/b&gt; Réorganiser le système d\&#039;origine des équations. (3.32) de sorte que tous les termes constants sont bi positive ou nulle en changeant, le cas échéant, les signes des deux côtés de l\&#039;une des équations. &lt;/p&gt;
+
+&lt;p&gt; 2. &lt;/b&gt; Présentez à ce système un ensemble de variables artificielles y &lt;sub&gt; 1 &lt;/sub&gt;, y &lt;sub&gt; 2 &lt;/sub&gt;. . . , y &lt;sub&gt; m &lt;/sub&gt; (qui servent de variables de base en phase I), où chacun y &lt;sub&gt; i &lt;/sub &gt;&gt; = 0, de sorte qu\&#039;il devient &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 11 &lt;/sub&gt; x&lt;sub&gt;1&lt;/sub&gt; + a &lt;sub&gt; 12 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; 1 &lt;/sub&gt; = b &lt;sub&gt;1&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 21 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 22 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; 2 &lt;/sub&gt; = b &lt;sub&gt;2&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; m &lt;/sub&gt; = b &lt;sub&gt;m&lt;/sub&gt; &lt; /p&gt;
+
+&lt;p&gt; b &lt;sub&gt; i&lt;/sub &gt;&gt; = 0 (3.34) &lt;/p&gt;
+
+&lt;p&gt; Notez que dans les équations. (3.34), pour un i particulier, l\&#039;a &lt;sub&gt;ij&lt;/sub&gt; \&#039;s et le b &lt;sub&gt; i &lt;/sub&gt; pourrait être le négatif de ce qu\&#039;ils étaient en Eq. (3.32) en raison de l\&#039;étape 1 . &lt;/p&gt;
+
+&lt;p&gt; La fonction objective de l\&#039;équation. (3.33) peut s\&#039;écrire &lt;/p&gt;
+
+&lt;p&gt; c &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + c &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + c &lt;sub&gt;n&lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + (-f) = 0 (3.35) &lt;/p&gt;
+
+&lt;p&gt; 3. &lt;/b&gt; &lt;i&gt; Phase I de la méthode &lt;/i&gt;. Définir un w de quantité comme la somme des variables artificielles &lt;/p&gt;
+
+&lt;p&gt; w = y &lt;sub&gt; 1 &lt;/sub&gt; + y &lt;sub&gt; 2 &lt;/sub&gt; + · · · + y &lt;sub&gt; m &lt;/sub&gt; (3.36) &lt;/p&gt;
+
+&lt;p&gt; et utiliser l\&#039;algorithme du simplexe pour trouver x &lt;sub&gt; i &lt;/sub &gt;&gt; = 0 (i = 1, 2, ..., n) et y &lt;sub&gt; i &lt;/sub &gt;&gt; = 0 (i = 1, 2, ..., m) qui minimisent w et satisfaire les équations. (3.34) et (3.35). Par conséquent, considérer le tableau &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 11 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 12 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; 1 &lt;/sub&gt; = b &lt;sub&gt;1&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 21 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 22 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; 2 &lt;/sub&gt; = b &lt;sub&gt;2&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt; ... &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; m &lt;/sub&gt; = b &lt;sub&gt;m&lt;/sub&gt; &lt; /p&gt;
+
+&lt;p&gt; c &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + c &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + c&lt;sub&gt; n&lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + (-f) = 0 &lt;/p&gt;
+
+&lt;p&gt; y &lt;sub&gt; 1 &lt;/sub&gt; + y &lt;sub&gt; 2 &lt;/sub&gt; + · · · + y &lt;sub&gt; m &lt;/sub&gt; + (-w) = 0 (3.37) &lt;/p&gt;
+
+&lt;p&gt; Ce tableau n\&#039;est pas en forme canonique, mais il peut être réécrite comme un système canonique avec les variables de base y &lt;sub&gt; 1 &lt;/sub&gt;, y &lt;sub&gt; 2 &lt;/sub&gt;. . . , y &lt;sub&gt; m &lt;/sub&gt;,-f, et -w par soustraction de la somme des m premières équations à partir de la dernière pour obtenir le nouveau système &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; 11 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 12 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; 1 &lt;/sub&gt; = b &lt;sub&gt;1&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; a &lt;sub&gt; 21 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; 22 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; 2 &lt;/sub&gt; = b &lt;sub&gt;2&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; ... ... &lt;/p&gt;
+
+&lt;p&gt; a&lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + a &lt;sub&gt; m &lt;/sub&gt; &lt;sub&gt; 2 &lt;/sub&gt; X &lt;sub&gt; 2 &lt;/sub&gt; + · · · + a &lt;sub&gt; mn &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + y &lt;sub&gt; m &lt;/sub&gt; = b &lt;sub&gt;m&lt;/sub&gt; &lt;/p&gt;
+
+&lt;p&gt; c &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + c &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + c&lt;sub&gt; n&lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + (-f) = 0 &lt;/p&gt;
+
+&lt;p&gt; d &lt;sub&gt; 1 &lt;/sub&gt; x &lt;sub&gt; 1 &lt;/sub&gt; + d &lt;sub&gt; 2 &lt;/sub&gt; x &lt;sub&gt; 2 &lt;/sub&gt; + · · · + d &lt;sub&gt; n &lt;/sub&gt; x &lt;sub&gt; n &lt;/sub&gt; + (-w) = -w&lt;sub&gt; 0 &lt;/sub&gt; (3.38) &lt;/p&gt;
+
+&lt;p&gt; où d &lt;sub&gt; i &lt;/sub&gt; = - (a &lt;sub&gt; 1 &lt;/sub&gt; &lt;sub&gt; i &lt;/sub&gt; + a &lt;sub&gt; 2 &lt;/sub&gt; &lt;sub&gt; i &lt;/sub &gt; + · · · + a &lt;sub&gt; mi &lt;/sub&gt;), i = 1, 2,. . . , N (3.39) &lt;/p&gt;
+
+&lt;p&gt;-w &lt;sub&gt; 0 &lt;/sub&gt; = - (b &lt;sub&gt; 1 &lt;/sub&gt; + b &lt;sub&gt; 2 &lt;/sub&gt; + · · · + b &lt;sub&gt; m &lt;/sub&gt;) (3.40) &lt;/p&gt;
+
+Equations &lt;p&gt; (3.38) fournissent la solution de base initial qui est nécessaire pour le démarrage de la phase I. &lt;/p&gt;
+
+&lt;p&gt; 4. &lt;/b&gt; Dans l\&#039;équation. (3.37), l\&#039;expression de w, en termes de variables artificielles y &lt;sub&gt; 1 &lt;/sub&gt;, y &lt;sub&gt; 2 &lt;/sub&gt;. . . , y &lt;sub&gt; m &lt;/sub&gt; est connu comme le formulaire d\&#039;infaisabilité &lt;i&gt;. w &lt;/i&gt; a la propriété que si à la suite de la phase I, avec un minimum de w&gt; 0, il n\&#039;existe pas de solution possible au problème de programmation linéaire initial indiqué dans les équations. (3,32) et (3,33), et donc la procédure est terminée. D\&#039;autre part, si le minimum de w = 0, le tableau résultant sera en forme canonique et donc lancer la phase II en éliminant l\&#039;équation w ainsi que les colonnes correspondant à chacune des variables artificielles y &lt;sub&gt; 1 &lt;/sub&gt;, y &lt;sub&gt; 2 &lt;/sub&gt;. . . , y &lt;sub&gt; m &lt;/sub&gt; à partir du tableau. &lt;/p&gt;
+
+&lt;b&gt; 5. &lt;/b&gt; &lt;i&gt; Phase II de la méthode &lt;/i&gt;. Appliquer l\&#039;algorithme simplex au système canonique ajusté à la fin de la phase I pour obtenir une solution, si un fini en existe un, ce qui optimise la valeur de f.</string>
+
+</resources>
